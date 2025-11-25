@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Profile Repo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Fira+Code&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f43f5e", // Rose 500
+            "background-light": "#fff1f2", // Rose 50
+            "background-dark": "#1f1115", // Dark Rose
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "mono": ["Fira Code", "monospace"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .form-input::placeholder {
+      color: #e5a9b4;opacity: 0.7;
+    }
+    .form-textarea::placeholder {
+      color: #e5a9b4;opacity: 0.7;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col text-white">
+<header class="sticky top-0 z-10 flex items-center bg-background-light/80 dark:bg-background-dark/80 p-4 pb-2 justify-between backdrop-blur-sm border-b border-white/10">
+<div class="flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Create Profile Repo</h1>
+<div class="flex w-12 items-center justify-end">
+<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0">1/3</p>
+</div>
+</header>
+<main class="flex-grow pb-28">
+<div class="flex p-4 @container mt-4">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-2 border-primary/30" data-alt="User's avatar placeholder image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdMxO2ilhKsFCdTfqsgGGJQQDXBjtZIJvHWnvkoozMe8nH9lvHjkCv-bhU5EqsgmUJykQ2rk7ENEBDcUXNhrmjjLqrGxqnUH7XeZHbMefTDb21drAas1VwDhHi9piiHNz3s8HzNIlrjnelzbkmxO6Mp82Irmj2Dr5sd0TiQv3Tlo9s0zD84b4qY_t8nUXysB-RY6xse7jHIR1bWgv4fhaqnQNwC8qfL_kkyWoz2i5J9QMdmzI49T539O4RDQmpmxsQvvJiodKufx4");'></div>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] w-full max-w-[480px] hover:bg-primary/30 transition-colors">
+<span class="truncate">Upload Avatar</span>
+</button>
+</div>
+</div>
+<section class="mt-6">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Profile.yml</h2>
+<div class="flex flex-col gap-1 px-4">
+<label class="flex flex-col flex-1 py-3">
+<p class="text-base font-medium leading-normal pb-2">Username</p>
+<input class="form-input font-mono flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#4d222b]/50 h-14 p-4 text-base font-normal leading-normal" placeholder="e.g., github-username" value=""/>
+</label>
+<label class="flex flex-col flex-1 py-3">
+<p class="text-base font-medium leading-normal pb-2">Display Name</p>
+<input class="form-input font-mono flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#4d222b]/50 h-14 p-4 text-base font-normal leading-normal" placeholder="Your Name" value=""/>
+</label>
+<label class="flex flex-col flex-1 py-3">
+<p class="text-base font-medium leading-normal pb-2">Location</p>
+<input class="form-input font-mono flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#4d222b]/50 h-14 p-4 text-base font-normal leading-normal" placeholder="e.g., San Francisco, CA" value=""/>
+</label>
+<label class="flex flex-col flex-1 py-3">
+<p class="text-base font-medium leading-normal pb-2">Role</p>
+<input class="form-input font-mono flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#4d222b]/50 h-14 p-4 text-base font-normal leading-normal" placeholder="e.g., Frontend Dev" value=""/>
+</label>
+</div>
+</section>
+<section class="mt-6">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">README.md</h2>
+<div class="px-4">
+<textarea class="form-textarea font-mono flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#4d222b]/50 p-4 text-base font-normal leading-relaxed min-h-[160px]" placeholder="// Tell us about yourself. Markdown is supported."></textarea>
+</div>
+</section>
+<section class="mt-6">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Tech Stack</h2>
+<div class="px-4">
+<div class="flex flex-col gap-3 rounded-xl bg-[#4d222b]/50 p-4">
+<div class="flex flex-wrap gap-2">
+<span class="flex items-center gap-1 rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">React<button class="material-symbols-outlined !text-sm">close</button></span>
+<span class="flex items-center gap-1 rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">Python<button class="material-symbols-outlined !text-sm">close</button></span>
+<span class="flex items-center gap-1 rounded-full bg-primary/20 px-3 py-1 text-sm font-medium text-primary">Docker<button class="material-symbols-outlined !text-sm">close</button></span>
+</div>
+<input class="form-input font-mono w-full bg-transparent border-0 focus:ring-0 p-0 text-white" placeholder="e.g., JavaScript, Rust, AWS..."/>
+</div>
+</div>
+</section>
+<section class="mt-6">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Bug Stories</h2>
+<div class="flex flex-col gap-4 px-4">
+<div class="rounded-xl border border-white/10 bg-[#4d222b]/30 p-4">
+<label class="flex flex-col flex-1">
+<p class="text-base font-medium leading-normal pb-2">Title</p>
+<input class="form-input font-mono flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#4d222b]/50 h-14 p-4 text-base font-normal leading-normal" placeholder="e.g., 'Doesn't use dark mode'" value="Always orders pineapple on pizza"/>
+</label>
+<label class="flex flex-col flex-1 mt-4">
+<p class="text-base font-medium leading-normal pb-2">Severity</p>
+<div class="relative">
+<select class="form-select appearance-none font-mono w-full rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#4d222b]/50 h-14 p-4 text-base">
+<option>Low</option>
+<option selected="">Medium</option>
+<option>Critical</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">expand_more</span>
+</div>
+</label>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full h-12 px-6 border-2 border-primary/40 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="truncate">Add Another Bug</span>
+</button>
+</div>
+</section>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-dark to-transparent">
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full h-14 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">code_blocks</span>
+<span class="truncate">Commit Profile</span>
+</button>
+</footer>
+</div>
+
+</body></html>
