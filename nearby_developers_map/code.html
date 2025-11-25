@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevConnect - Map View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f43f5e", // Rose 500
+                        "primary-light": "#fda4af", // Rose 300
+                        "background-light": "#fff1f2", // Rose 50
+                        "background-dark": "#1f2937", // Gray 800 (A deep base for rose accents)
+                        "accent-blue": "#fb7185", // Rose 400
+                        "medium-gray": "#374151", // Gray 700
+                        "light-gray": "#f9fafb", // Gray 50
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'pulse-subtle': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-light-gray">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<div class="flex h-full flex-1">
+<aside class="flex h-full w-[360px] shrink-0 flex-col border-r border-medium-gray/50 bg-background-dark p-6 transition-all duration-300">
+<div class="flex items-center pb-2">
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Bug &amp; Hug</h2>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-medium-gray text-light-gray/80 hover:bg-medium-gray/80">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<div class="py-4">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded h-full">
+<div class="text-primary flex border-none bg-medium-gray items-center justify-center pl-4 rounded-l border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-light-gray focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-medium-gray focus:border-none h-full placeholder:text-light-gray/50 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Filter by language, tech..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 flex-col overflow-y-auto pt-4 pr-2 -mr-2">
+<div class="relative mb-4">
+<img class="aspect-square w-full rounded-lg object-cover" data-alt="Profile picture of Maya" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3pApPfqJcJUUTwDVT5kduQvObN1e7nWtsawYtqniLdbrfUm_ssvVUlpte4IJD_GzFK1tDJ8EoQpDrCb8eoN1AaDBoR6a7lKoHM94TXRMtYarRg4PAmYB5rL50_D7XkASiwNoAR6CPj4_wTtIaCRSbL6UXpYDRgQkrsOpUcpWYKgun1B-I8yzG-R95r1g_lguf_QwcWz7W0clFbZ1JJfQqKUCf8LBAwDb3djxFLnVJ_lEMguG6iFihWP1KZRN2IXdGMYjZNJrWnq0"/>
+<div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end rounded-b-lg">
+<h3 class="text-2xl font-bold text-white">Maya, 28</h3>
+<p class="text-sm text-primary-light">JavaScript Developer</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div>
+<h4 class="font-bold text-light-gray mb-1">Bio</h4>
+<p class="text-sm text-light-gray/80">Frontend dev with a love for React and a passion for clean UI. In my free time, I'm probably debugging my life or contributing to open-source. Looking for a co-op partner for life's next big feature.</p>
+</div>
+<div>
+<h4 class="font-bold text-light-gray mb-2">Tech Stack</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-medium-gray text-light-gray/90 text-xs font-medium px-3 py-1 rounded-full">React</span>
+<span class="bg-medium-gray text-light-gray/90 text-xs font-medium px-3 py-1 rounded-full">TypeScript</span>
+<span class="bg-medium-gray text-light-gray/90 text-xs font-medium px-3 py-1 rounded-full">Node.js</span>
+<span class="bg-medium-gray text-light-gray/90 text-xs font-medium px-3 py-1 rounded-full">Figma</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 pt-2">
+<button class="w-full text-center items-center justify-center rounded-full bg-primary/20 text-primary-light py-3 text-base font-bold leading-normal tracking-[-0.015em] hover:bg-primary/30">
+                                Send Hug
+                            </button>
+<button class="w-full text-center items-center justify-center rounded-full bg-medium-gray text-light-gray py-3 text-base font-bold leading-normal tracking-[-0.015em] hover:bg-opacity-80">
+                                File Bug Report
+                            </button>
+<button class="w-full text-center items-center justify-center rounded-full bg-medium-gray text-light-gray py-3 text-base font-bold leading-normal tracking-[-0.015em] hover:bg-opacity-80">
+                                Suggest a Fix
+                            </button>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A stylized dark-themed map of a city area showing streets and buildings." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBaDMOxLcTGVJpB-WPDheuMXeniRsd9-Fo8wxszxWJpi_MuSREYSsTYkL9fDJTv41fIbohVlBjpnynADo4-a7okSO3Vpl_99Loqi19zOTgeAHnVBWdlMzWlWvNwU4auZn1ijIf8iiVeFx_gKZct55nyckDyJjXxlTUk_iLsWYEsvQyjurmCLvE1XQZVgHZzqExVrI153pIL-7wsaFEIFS8Z0UYmcWz42Ko3dRoNV8hanjGufxfoKIXR8w4T2M4AByTPXIXs2NNz_XY');">
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative h-full w-full p-6 flex flex-col justify-between pointer-events-none">
+<div class="flex justify-center w-full">
+<div class="bg-black/50 backdrop-blur-sm p-3 px-6 rounded-full shadow-lg pointer-events-auto">
+<p class="text-light-gray text-center"><span class="font-bold text-primary-light">You are at:</span> DLF IT Park, Chennai</p>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="absolute pointer-events-auto flex flex-col items-center group cursor-pointer" style="transform: translate(0px, 0px);">
+<div class="h-4 w-4 rounded-full bg-accent-blue shadow-[0_0_12px_4px_rgba(251,113,133,0.7)]"></div>
+</div>
+<div class="absolute pointer-events-auto flex flex-col items-center group cursor-pointer" style="transform: translate(-150px, -80px);">
+<div class="absolute bottom-full mb-4 w-64 bg-background-dark/80 backdrop-blur-md rounded-lg p-3 shadow-2xl transition-all opacity-100 scale-100 transform origin-bottom">
+<div class="flex items-center gap-3">
+<img class="w-14 h-14 rounded-full object-cover border-2 border-primary" data-alt="Profile picture of Maya" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBVpOeB2eEvK8JhCJQ-ZtFbaPCGUzVoIAKCpxDnL6MTk-BkQvEYHw_nIq-ZQbIU5EIMp_LbxcJ8XQberjO02Rs-jju7M5HyoHA1xzRyIxyeKJtztm6slIAVt0Iqp9-BBMDOEAjh9iQvt7-3JE71rOsnIRSds5fFZpFH0Fc0GpJbtj3actsZSd1BZs_C1T4c3OGKn4SOuRPW6oDnkLjMxZ39a1YV9CGn0uneVJ7dYQGw1WJ4AIcxB6WBEhW6OojLmLpgIQg9PL_Ibg"/>
+<div class="flex-1">
+<h4 class="font-bold text-white">Maya</h4>
+<p class="text-sm text-primary-light">JavaScript Dev</p>
+<p class="text-xs text-light-gray/70">0.5km away</p>
+</div>
+</div>
+<button class="mt-3 w-full text-center rounded bg-primary/20 text-primary-light py-1.5 text-sm font-semibold hover:bg-primary/30">View Profile</button>
+</div>
+<img class="w-12 h-12 rounded-full object-cover border-4 border-primary shadow-[0_0_15px_rgba(244,63,94,0.6)]" data-alt="Profile picture marker for Maya" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYTZPZkg0oWqpmNZ6aBVDx1wzpluQQyl2VVjId9FIgXtaE4CypKTrPtkyKzjlb4BRSmXO5lv28ULsqZk-zEStXNPMkaIB-DXHaOfsxY8SXVSy84poxNKACcNuPtHwk9LXz7oA6Zo9VhCGHwhpdRegzbp2k7E2t4LFopDcV98PjVaoA3b12RaP2cdO63jbMjeikJrXfg6XwOx4ZRKtgDFSk1afs_hBREyOK9QASwbfKd9a3WDm4b6y2U6hZDz5y8OEaOfvPrNegl0"/>
+</div>
+<div class="absolute pointer-events-auto flex flex-col items-center group cursor-pointer" style="transform: translate(180px, 120px);">
+<img class="w-10 h-10 rounded-full object-cover border-2 border-medium-gray group-hover:border-primary group-hover:scale-110 transition-all shadow-lg" data-alt="Profile picture marker for Alex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENMrPjfU79KiSdUmT052I4L11txjtguxzudsAnN9Q09DYWKIKn0AblbgSl4te1GXs-l3XCGGo0UuY4sICDLqlQ6sSyYxjFPhj6H58_GmNpvHhi5TvoncPCisdY3rUG0j9euQIeeDKcpT2wuCvKh962kyuOPomZxYgea9P64M9oiJbtC8h94g6Vtd5Hg39gK2TVYP7wkhhOBfnrfglnGt0WPHNxZ6_P5hFul8Qkm91bdkRYN2EArQEWa47k5C-PvgGOBqkzQMdJwY"/>
+<div class="absolute h-3 w-3 -bottom-1 -right-1 rounded-full bg-primary border-2 border-background-dark animate-pulse-subtle"></div>
+</div>
+<div class="absolute pointer-events-auto flex flex-col items-center group cursor-pointer" style="transform: translate(-90px, 150px);">
+<img class="w-10 h-10 rounded-full object-cover border-2 border-medium-gray group-hover:border-primary group-hover:scale-110 transition-all shadow-lg" data-alt="Profile picture marker for Chloe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdCvfi8BKiJaI6OYsMRmgo2skhNWIVriIIMcNJR8FTCn7Si86jvJjTnbfer0nqXZo6_LZjaUKZl88I-7WU234jzw5J7sltJboiR6ZFTDUMmkHXo1swEHgL80FX1XTjdcBCag8Kqenk1LY1a8nqwhmHiH3QnHBa5L2sSWPFnK52EmCS4ng0KtX-O57yqUG_j1vG4fG46Gg72MW6QIbDaBxAGkwYm5Tn7IQpRV5cMezSrYMYxCyP6YKDbQfvZmqBXzNLJIZBPGwu1S0"/>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3 self-end pointer-events-auto">
+<div class="flex flex-col gap-px">
+<button class="flex size-10 items-center justify-center rounded-t bg-black/50 backdrop-blur-sm hover:bg-black/70">
+<span class="material-symbols-outlined text-white">add</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-b bg-black/50 backdrop-blur-sm hover:bg-black/70">
+<span class="material-symbols-outlined text-white">remove</span>
+</button>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70">
+<span class="material-symbols-outlined text-white">my_location</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
